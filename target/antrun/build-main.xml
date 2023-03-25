@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo message="*******************install-or-package*******************"/>
+  <mkdir dir="D:\程序\大四下期\Netty_黏包与半包现象解决/target/classes"/>
+  <copy todir="D:\程序\大四下期\Netty_黏包与半包现象解决\target/classes" overwrite="true">
+    <fileset dir="D:\程序\大四下期\Netty_黏包与半包现象解决\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+  <move file="D:\程序\大四下期\Netty_黏包与半包现象解决\target/classes/Netty_黏包与半包现象解决.jar" tofile="D:\程序\大四下期\Netty_黏包与半包现象解决\target/Netty_黏包与半包现象解决_hide.jar"/>
+  <copy todir="D:\程序\大四下期\Netty_黏包与半包现象解决\target/classes" overwrite="true">
+    <fileset dir="D:\程序\大四下期\Netty_黏包与半包现象解决\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+  <move file="D:\程序\大四下期\Netty_黏包与半包现象解决\target/classes/Netty_黏包与半包现象解决.jar" tofile="D:\程序\大四下期\Netty_黏包与半包现象解决\target/Netty_黏包与半包现象解决_args.jar"/>
+  <move file="D:\程序\大四下期\Netty_黏包与半包现象解决\target/classes/Netty_黏包与半包现象解决_hide.jar" tofile="D:\程序\大四下期\Netty_黏包与半包现象解决\target/Netty_黏包与半包现象解决_args_save.jar"/>
+  <copy todir="D:/jar包/" overwrite="true">
+    <fileset dir="D:\程序\大四下期\Netty_黏包与半包现象解决\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+  <copy todir="D:\程序\大四下期\Netty_黏包与半包现象解决\target/" overwrite="true">
+    <fileset dir="D:/jar包/" erroronmissingdir="false">
+      <include name="*.bat"/>
+    </fileset>
+  </copy>
+  <copy todir="D:\程序\大四下期\Netty_黏包与半包现象解决\target/" overwrite="true">
+    <fileset dir="D:/jar包/" erroronmissingdir="false">
+      <include name="jar启动器.7z"/>
+    </fileset>
+  </copy>
+</target>
+</project>
